@@ -2,6 +2,7 @@
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
+    ---
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,13 +17,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from trailer.views import current_date
-from TheTaken.view import hello
-from TheTaken import search
+from search.views import search,search_form
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^current_date', current_date),
-    url(r'^hello/$', hello),
-    url(r'^search-form/$', search.search_form),
-    url(r'^search/$', search.search)
+    url(r'^search-form/$', search_form),
+    url(r'^search/$', search)
+
 ]

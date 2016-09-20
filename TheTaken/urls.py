@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^current_date', current_date),
     url(r'^hello/$', hello),
-    url(r'^search-form/$', search.search2),
+    url(r'^search-form/$', search.search_form),
     url(r'^search/$', search.search)
 ]
